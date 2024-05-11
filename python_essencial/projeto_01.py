@@ -23,3 +23,15 @@ Sugestões para implementação:
 
 Isso deve fornecer um desafio interessante para você elaborar um projeto completo em Python, aplicando conceitos como entrada e saída de dados, estruturas de dados, funções e tratamento de erros. Se precisar de ajuda ou tiver alguma dúvida durante a implementação, estou aqui para ajudar!
 '''
+
+#despesas diárias, como descrição da despesa e valor gasto.
+
+# função input
+nome_despesa = input("qual o nome da despesa:")
+
+despesa_descricao = input("qual descrição deseja adicionar para essa despesa:")
+
+valor_despesa = input("qual o valor da despesa:")
+
+# função print
+print(f"olá {nome}")
