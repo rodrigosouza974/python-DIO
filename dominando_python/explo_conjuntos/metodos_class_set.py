@@ -80,22 +80,22 @@ print(dif_simetrica)  # Output: {1, 4}
 
 #12. **`issubset(other)`**
    # - Descrição: Retorna `True` se o set for um subconjunto de `other`.
-      set1 = {1, 2, 3}
-      set2 = {1, 2, 3, 4, 5}
-      print(set1.issubset(set2))  # Output: True
-      ```
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+print(set1.issubset(set2))  # Output: True
+      
 
 #13. **`issuperset(other)`**
     # Descrição: Retorna `True` se o set for um superconjunto de `other`.
-      set1 = {1, 2, 3, 4, 5}
-      set2 = {1, 2, 3}
-      print(set1.issuperset(set2))  # Output: True
+set1 = {1, 2, 3, 4, 5}
+set2 = {1, 2, 3}
+print(set1.issuperset(set2))  # Output: True
 
 #14. **`isdisjoint(other)`**
    # - Descrição: Retorna `True` se o set não tiver elementos em comum com `other`.
-      set1 = {1, 2, 3}
-      set2 = {4, 5, 6}
-      print(set1.isdisjoint(set2))  # Output: True
+set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+print(set1.isdisjoint(set2))  # Output: True
 
 ### Operações com Sets
 

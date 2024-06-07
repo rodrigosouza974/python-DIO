@@ -4,7 +4,6 @@ Vamos focar na criação de uma classe e instanciar objetos dessa classe. Para s
 
 A classe `Carro` terá alguns atributos (marca, modelo, ano) e métodos (descrever, dirigir).
 
-```python
 class Carro:
     # Método inicializador (construtor)
     def __init__(self, marca, modelo, ano):
