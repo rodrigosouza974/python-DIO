@@ -1,15 +1,20 @@
-O processo de instanciamento em Programação Orientada a Objetos (POO) refere-se à criação de um objeto a partir de uma classe. Em Python, isso é feito chamando a classe como se fosse uma função, o que aciona o método `__init__` da classe para inicializar o novo objeto.
-
+"""O processo de instanciamento em Programação Orientada
+a Objetos (POO) refere-se à criação de um objeto a
+partir de uma classe. Em Python, isso é feito chamando
+a classe como se fosse uma função, o que aciona o 
+método `__init__` da classe para inicializar o novo objeto.
+"""
 ### Detalhes do Instanciamento
 
-1. **Definição da Classe**: Primeiro, você define uma classe com seus atributos e métodos.
-2. **Chamada da Classe para Criar um Objeto**: Você cria uma instância da classe, passando os parâmetros necessários para o método `__init__`.
+"""1. **Definição da Classe**: Primeiro, você define uma classe com seus atributos e métodos.
+2. **Chamada da Classe para Criar um Objeto**: Você cria 
+uma instância da classe, passando os parâmetros necessários 
+para o método `__init__`.
 
-Vamos detalhar o processo com exemplos baseados nas classes `Livro` e `Biblioteca` que definimos anteriormente.
-
+Vamos detalhar o processo com exemplos baseados nas classes 
+`Livro` e `Biblioteca` que definimos anteriormente.
+"""
 ### Classe `Livro`
-
-```python
 class Livro:
     def __init__(self, titulo, autor, ano_publicacao):
         self.titulo = titulo
@@ -18,17 +23,14 @@ class Livro:
 
     def __str__(self):
         return f"'{self.titulo}' por {self.autor} ({self.ano_publicacao})"
-```
 
 #### Instanciamento de `Livro`
 
-Para criar uma instância da classe `Livro`, você faz o seguinte:
-
-```python
+"""Para criar uma instância da classe `Livro`, você faz o seguinte:
+"""
 livro1 = Livro("1984", "George Orwell", 1949)
-```
 
-- **Chamada da Classe**: `Livro("1984", "George Orwell", 1949)`
+"""- **Chamada da Classe**: `Livro("1984", "George Orwell", 1949)`
   - Isso chama o método `__init__` da classe `Livro`.
 - **Execução do `__init__`**:
   - `self` é a referência ao novo objeto que está sendo criado.
@@ -36,10 +38,8 @@ livro1 = Livro("1984", "George Orwell", 1949)
   - `self.autor` é definido como `"George Orwell"`.
   - `self.ano_publicacao` é definido como `1949`.
 - **Resultado**: Uma nova instância de `Livro` é criada e armazenada na variável `livro1`.
-
+"""
 ### Classe `Biblioteca`
-
-```python
 class Biblioteca:
     def __init__(self):
         self.livros = []
@@ -69,28 +69,25 @@ class Biblioteca:
             if livro.titulo == titulo:
                 return livro
         return None
-```
+
 
 #### Instanciamento de `Biblioteca`
 
-Para criar uma instância da classe `Biblioteca`, você faz o seguinte:
-
-```python
+"""Para criar uma instância da classe `Biblioteca`, você faz o seguinte:
+"""
 biblioteca = Biblioteca()
-```
 
-- **Chamada da Classe**: `Biblioteca()`
+"""- **Chamada da Classe**: `Biblioteca()`
   - Isso chama o método `__init__` da classe `Biblioteca`.
 - **Execução do `__init__`**:
   - `self` é a referência ao novo objeto que está sendo criado.
   - `self.livros` é inicializado como uma lista vazia.
 - **Resultado**: Uma nova instância de `Biblioteca` é criada e armazenada na variável `biblioteca`.
-
+"""
 ### Exemplos Completos de Uso
 
-Vamos ver um exemplo completo combinando a criação de instâncias das duas classes e utilizando seus métodos:
-
-```python
+"""Vamos ver um exemplo completo combinando a criação de instâncias das duas classes e utilizando seus métodos:
+"""
 # Criação de livros
 livro1 = Livro("1984", "George Orwell", 1949)
 livro2 = Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954)
@@ -120,11 +117,15 @@ biblioteca.remover_livro("O Senhor dos Anéis")
 
 # Listando livros após a remoção
 biblioteca.listar_livros()
-```
 
 ### Explicação Final
 
-- **Instanciar um Objeto**: Chamar uma classe como se fosse uma função, passando os parâmetros necessários para o método `__init__`.
-- **Uso de Métodos**: Uma vez instanciados, os métodos dos objetos podem ser chamados para manipular e interagir com os atributos e outros métodos do objeto.
+"""- **Instanciar um Objeto**: Chamar uma classe como se fosse 
+uma função, passando os parâmetros necessários para o método `__init__`.
+- **Uso de Métodos**: Uma vez instanciados, os métodos dos 
+objetos podem ser chamados para manipular e interagir com os 
+atributos e outros métodos do objeto.
 
-Compreender o processo de instanciamento é fundamental para trabalhar com POO, pois permite criar múltiplas instâncias de uma classe, cada uma com seus próprios dados e comportamentos independentes.
+Compreender o processo de instanciamento é fundamental para 
+trabalhar com POO, pois permite criar múltiplas instâncias 
+de uma classe, cada uma com seus próprios dados e comportamentos independentes."""

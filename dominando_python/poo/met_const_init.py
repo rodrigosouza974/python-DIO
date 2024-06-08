@@ -1,16 +1,22 @@
-O método construtor `__init__` em Python é um método especial utilizado para inicializar uma nova instância de uma classe. Quando você cria uma nova instância de uma classe, o Python chama automaticamente o método `__init__` dessa classe. Este método permite configurar os atributos iniciais do objeto.
-
+"""O método construtor `__init__` em Python é um 
+método especial utilizado para inicializar uma nova 
+instância de uma classe. Quando você cria uma nova 
+instância de uma classe, o Python chama automaticamente 
+o método `__init__` dessa classe. Este método permite 
+configurar os atributos iniciais do objeto.
+"""
 ### Funcionamento do `__init__`
 
-- **Nome do Método**: `__init__`
+"""- **Nome do Método**: `__init__`
 - **Execução**: É chamado automaticamente quando uma nova instância da classe é criada.
-- **Parâmetros**: O primeiro parâmetro deve ser `self`, que representa a instância que está sendo criada. Os parâmetros subsequentes são aqueles que você deseja passar ao criar a instância.
-
+- **Parâmetros**: O primeiro parâmetro deve ser `self`, 
+que representa a instância que está sendo criada. Os 
+parâmetros subsequentes são aqueles que você deseja passar ao criar a instância.
+"""
 ### Exemplo com a Classe `Livro`
 
-Vamos revisar a classe `Livro` com o método `__init__`:
-
-```python
+"""Vamos revisar a classe `Livro` com o método `__init__`:
+"""
 class Livro:
     def __init__(self, titulo, autor, ano_publicacao):
         self.titulo = titulo
@@ -19,11 +25,10 @@ class Livro:
 
     def __str__(self):
         return f"'{self.titulo}' por {self.autor} ({self.ano_publicacao})"
-```
 
 #### Componentes do Método `__init__`:
 
-1. **Definição do Método**: `def __init__(self, titulo, autor, ano_publicacao):`
+"""1. **Definição do Método**: `def __init__(self, titulo, autor, ano_publicacao):`
     - `self`: Referência à instância que está sendo criada.
     - `titulo`, `autor`, `ano_publicacao`: Parâmetros que serão utilizados para inicializar os atributos da instância.
 
@@ -36,23 +41,20 @@ class Livro:
     - `self.titulo`: Atribui o valor do parâmetro `titulo` ao atributo `titulo` da instância.
     - `self.autor`: Atribui o valor do parâmetro `autor` ao atributo `autor` da instância.
     - `self.ano_publicacao`: Atribui o valor do parâmetro `ano_publicacao` ao atributo `ano_publicacao` da instância.
-
+"""
 #### Criando Instâncias de `Livro`
 
-Para criar uma nova instância de `Livro`, você chama a classe passando os argumentos necessários:
-
-```python
+"""Para criar uma nova instância de `Livro`, você chama a classe passando os argumentos necessários:
+"""
 livro1 = Livro("1984", "George Orwell", 1949)
 livro2 = Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954)
-```
 
-Aqui, `livro1` e `livro2` são instâncias da classe `Livro` inicializadas com os valores fornecidos.
-
+"""Aqui, `livro1` e `livro2` são instâncias da classe `Livro` inicializadas com os valores fornecidos.
+"""
 ### Exemplo Completo com a Classe `Biblioteca`
 
-Vamos incluir o método `__init__` na classe `Biblioteca`:
-
-```python
+"""Vamos incluir o método `__init__` na classe `Biblioteca`:
+"""
 class Biblioteca:
     def __init__(self):
         self.livros = []
@@ -89,33 +91,34 @@ class Biblioteca:
         else:
             livros_str = ", ".join(str(livro) for livro in self.livros)
             return f"Biblioteca com os seguintes livros: {livros_str}"
-```
 
 #### Componentes do Método `__init__` em `Biblioteca`:
 
-1. **Definição do Método**: `def __init__(self):`
+"""1. **Definição do Método**: `def __init__(self):`
     - `self`: Referência à instância que está sendo criada.
 
 2. **Inicialização dos Atributos**:
     ```python
     self.livros = []
     ```
-    - `self.livros`: Inicializa o atributo `livros` como uma lista vazia.
+    - `self.livros`: Inicializa o atributo `livros` como uma lista vazia."""
 
 #### Criando Instâncias de `Biblioteca`
 
-Para criar uma nova instância de `Biblioteca`, você simplesmente chama a classe:
-
-```python
+"""Para criar uma nova instância de `Biblioteca`, você simplesmente chama a classe:
+"""
 biblioteca = Biblioteca()
-```
 
-Aqui, `biblioteca` é uma instância da classe `Biblioteca` com o atributo `livros` inicializado como uma lista vazia.
-
+"""Aqui, `biblioteca` é uma instância da classe 
+`Biblioteca` com o atributo `livros` inicializado como uma lista vazia.
+"""
 ### Resumo
 
-- **Método `__init__`**: Utilizado para inicializar uma nova instância de uma classe.
+"""- **Método `__init__`**: Utilizado para inicializar uma nova instância de uma classe.
 - **`self`**: Referência à instância que está sendo criada.
-- **Atributos**: São definidos e inicializados dentro do `__init__` usando os parâmetros passados na criação da instância.
+- **Atributos**: São definidos e inicializados dentro do 
+`__init__` usando os parâmetros passados na criação da instância.
 
-Este método é essencial para configurar os atributos iniciais dos objetos e garantir que cada instância da classe esteja corretamente configurada desde o momento da criação.
+Este método é essencial para configurar os atributos 
+iniciais dos objetos e garantir que cada instância da 
+classe esteja corretamente configurada desde o momento da criação."""

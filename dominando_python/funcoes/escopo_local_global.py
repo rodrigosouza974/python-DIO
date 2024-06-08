@@ -1,12 +1,14 @@
-Em Python, variáveis e funções têm escopos que determinam onde essas variáveis podem ser acessadas e modificadas. Existem principalmente dois tipos de escopo: local e global.
-
+"""Em Python, variáveis e funções têm escopos que 
+determinam onde essas variáveis podem ser acessadas e
+ modificadas. Existem principalmente dois tipos de escopo: local e global.
+"""
 ### Escopo Global
 
-Variáveis definidas no nível mais externo de um script ou módulo têm escopo global. Elas podem ser acessadas em qualquer lugar do código, incluindo dentro de funções, desde que não sejam sobrescritas por variáveis locais.
-
-#### Exemplo de Escopo Global
-
-```python
+"""Variáveis definidas no nível mais externo de
+ um script ou módulo têm escopo global. Elas podem 
+ ser acessadas em qualquer lugar do código, incluindo 
+ dentro de funções, desde que não sejam sobrescritas por variáveis locais.
+"""
 x = 10  # Variável global
 
 def funcao():
@@ -14,30 +16,29 @@ def funcao():
 
 funcao()  # Saída: 10
 print(x)  # Saída: 10
-```
 
 ### Escopo Local
 
-Variáveis definidas dentro de uma função têm escopo local. Elas só podem ser acessadas dentro da função onde foram definidas.
-
+"""Variáveis definidas dentro de uma função têm escopo local.
+ Elas só podem ser acessadas dentro da função onde foram definidas.
+"""
 #### Exemplo de Escopo Local
-
-```python
 def funcao():
     y = 5  # Variável local
     print(y)  # Acessa a variável local y
 
 funcao()  # Saída: 5
 # print(y)  # Isso causará um erro, pois y não é acessível fora da função
-```
 
 ### Modificando Variáveis Globais Dentro de Funções
 
-Para modificar uma variável global dentro de uma função, você deve usar a palavra-chave `global`. Sem isso, qualquer atribuição a uma variável com o mesmo nome dentro da função criará uma nova variável local.
-
+"""Para modificar uma variável global dentro de uma 
+função, você deve usar a palavra-chave `global`. Sem 
+isso, qualquer atribuição a uma variável com o mesmo 
+nome dentro da função criará uma nova variável local.
+"""
 #### Exemplo Usando `global`
 
-```python
 x = 10  # Variável global
 
 def funcao():
@@ -47,15 +48,14 @@ def funcao():
 
 funcao()
 print(x)  # Saída: 20
-```
 
 ### A Palavra-Chave `nonlocal`
 
-Além de `global`, existe `nonlocal`, que permite modificar variáveis em um escopo de função aninhada (enclosing scope). É útil para trabalhar com funções dentro de funções.
-
+"""Além de `global`, existe `nonlocal`, que permite
+ modificar variáveis em um escopo de função aninhada 
+ (enclosing scope). É útil para trabalhar com funções dentro de funções.
+"""
 #### Exemplo Usando `nonlocal`
-
-```python
 def funcao_externa():
     x = 10  # Variável na função externa
 
@@ -68,20 +68,17 @@ def funcao_externa():
     print(x)  # Saída: 20
 
 funcao_externa()
-```
 
 ### Resumo
 
-- **Escopo Global**: Variáveis definidas fora de todas as funções, acessíveis de qualquer lugar do código.
+"""- **Escopo Global**: Variáveis definidas fora de todas as funções, acessíveis de qualquer lugar do código.
 - **Escopo Local**: Variáveis definidas dentro de uma função, acessíveis apenas dentro dessa função.
 - **`global`**: Permite modificar variáveis globais dentro de funções.
 - **`nonlocal`**: Permite modificar variáveis de um escopo de função aninhada.
-
+"""
 ### Exemplos Práticos
 
 #### 1. Escopo Global e Local
-
-```python
 x = 100  # Variável global
 
 def minha_funcao():
@@ -92,11 +89,8 @@ def minha_funcao():
 minha_funcao()
 print("Fora da função, x:", x)  # Acessa variável global
 # print("Fora da função, y:", y)  # Erro: y não é definida no escopo global
-```
 
 #### 2. Modificando Variável Global
-
-```python
 x = 100
 
 def minha_funcao():
@@ -106,11 +100,8 @@ def minha_funcao():
 
 minha_funcao()
 print("Fora da função, x agora é:", x)  # Saída: Fora da função, x agora é: 200
-```
 
 #### 3. Usando `nonlocal`
-
-```python
 def externa():
     x = 10
 
@@ -123,6 +114,7 @@ def externa():
     print("Dentro da função externa, x depois da modificação:", x)
 
 externa()
-```
 
-Entender o escopo de variáveis é essencial para evitar bugs e garantir que seu código se comporte conforme esperado.
+
+"""Entender o escopo de variáveis é essencial para 
+evitar bugs e garantir que seu código se comporte conforme esperado."""

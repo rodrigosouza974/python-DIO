@@ -1,71 +1,71 @@
-Métodos especiais, também conhecidos como "métodos mágicos" ou "dunder methods" (porque seus nomes começam e terminam com dois sublinhados, "__"), são métodos definidos em uma classe que Python chama automaticamente em circunstâncias específicas. Esses métodos permitem que você defina como instâncias da classe devem se comportar com relação a operações básicas e integradas, como adição, subtração, comparação, representação em string, entre outras.
-
+"""Métodos especiais, também conhecidos como "métodos mágicos" 
+ou "dunder methods" (porque seus nomes começam e terminam com
+dois sublinhados, "__"), são métodos definidos em uma classe 
+que Python chama automaticamente em circunstâncias específicas. 
+Esses métodos permitem que você defina como instâncias da classe 
+devem se comportar com relação a operações básicas e integradas, 
+como adição, subtração, comparação, representação em string, entre outras.
+"""
 ### Exemplos de Métodos Especiais
 
-Aqui estão alguns exemplos comuns de métodos especiais em Python:
+#Aqui estão alguns exemplos comuns de métodos especiais em Python:
 
-1. **`__init__(self, ...)`**: Inicializa uma nova instância da classe.
-    ```python
-    class Exemplo:
-        def __init__(self, valor):
-            self.valor = valor
-    ```
+#1. **`__init__(self, ...)`**: Inicializa uma nova instância da classe.
+ 
+class Exemplo:
+    def __init__(self, valor):
+        self.valor = valor
+    
 
-2. **`__str__(self)`**: Define a representação em string de um objeto (usada por `print()` e `str()`).
-    ```python
-    class Exemplo:
-        def __init__(self, valor):
-            self.valor = valor
+#2. **`__str__(self)`**: Define a representação em string de um objeto (usada por `print()` e `str()`).
+class Exemplo:
+    def __init__(self, valor):
+        self.valor = valor
 
-        def __str__(self):
-            return f"Exemplo com valor {self.valor}"
-    ```
+    def __str__(self):
+        return f"Exemplo com valor {self.valor}"
+    
 
-3. **`__repr__(self)`**: Define a representação "oficial" de um objeto, usada para depuração.
-    ```python
+#3. **`__repr__(self)`**: Define a representação "oficial" de um objeto, usada para depuração.
+   
     class Exemplo:
         def __init__(self, valor):
             self.valor = valor
 
         def __repr__(self):
             return f"Exemplo(valor={self.valor})"
-    ```
+    
 
-4. **`__eq__(self, other)`**: Define o comportamento da igualdade (==).
-    ```python
+#4. **`__eq__(self, other)`**: Define o comportamento da igualdade (==).
+    
     class Exemplo:
         def __init__(self, valor):
             self.valor = valor
 
         def __eq__(self, other):
             return self.valor == other.valor
-    ```
+    
 
-5. **`__add__(self, other)`**: Define o comportamento da adição (+).
-    ```python
+#5. **`__add__(self, other)`**: Define o comportamento da adição (+).
     class Exemplo:
         def __init__(self, valor):
             self.valor = valor
 
         def __add__(self, other):
             return Exemplo(self.valor + other.valor)
-    ```
-
-6. **`__len__(self)`**: Define o comportamento da função `len()` em um objeto.
-    ```python
+    
+#6. **`__len__(self)`**: Define o comportamento da função `len()` em um objeto.
     class Exemplo:
         def __init__(self, lista):
             self.lista = lista
 
         def __len__(self):
             return len(self.lista)
-    ```
-
+    
 ### Implementação de Alguns Métodos Especiais
 
-Vamos implementar uma classe com alguns desses métodos especiais para ver como eles funcionam juntos.
+#Vamos implementar uma classe com alguns desses métodos especiais para ver como eles funcionam juntos.
 
-```python
 class Livro:
     def __init__(self, titulo, autor, ano_publicacao):
         self.titulo = titulo
@@ -87,13 +87,12 @@ class Livro:
 
     def __lt__(self, other):
         return self.ano_publicacao < other.ano_publicacao
-```
+
 
 ### Utilizando a Classe `Livro` com Métodos Especiais
 
-Vamos criar algumas instâncias da classe `Livro` e ver como os métodos especiais funcionam:
+#Vamos criar algumas instâncias da classe `Livro` e ver como os métodos especiais funcionam:
 
-```python
 livro1 = Livro("1984", "George Orwell", 1949)
 livro2 = Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954)
 livro3 = Livro("1984", "George Orwell", 1949)
@@ -108,12 +107,17 @@ print(livro1 == livro2)  # False
 
 # __lt__
 print(livro1 < livro2)  # True (1949 < 1954)
-```
+
 
 ### Resumo
 
-- **Métodos especiais**: São métodos com nomes específicos e entre duplos sublinhados que Python chama automaticamente em certas situações.
-- **Exemplos comuns**: `__init__`, `__str__`, `__repr__`, `__eq__`, `__add__`, `__len__`, `__lt__`, entre outros.
-- **Utilidade**: Eles permitem personalizar o comportamento dos objetos da classe para operações integradas do Python, tornando os objetos mais intuitivos e fáceis de usar.
+"""- **Métodos especiais**: São métodos com nomes específicos 
+e entre duplos sublinhados que Python chama automaticamente em certas situações.
+- **Exemplos comuns**: `__init__`, `__str__`, `__repr__`, 
+`__eq__`, `__add__`, `__len__`, `__lt__`, entre outros.
+- **Utilidade**: Eles permitem personalizar o comportamento 
+dos objetos da classe para operações integradas do Python, 
+tornando os objetos mais intuitivos e fáceis de usar.
 
-Implementar esses métodos especiais nas suas classes permite que suas instâncias se comportem de maneira consistente e natural ao interagir com as operações e funções integradas do Python.
+Implementar esses métodos especiais nas suas classes permite que 
+suas instâncias se comportem de maneira consistente e natural ao interagir com as operações e funções integradas do Python."""
