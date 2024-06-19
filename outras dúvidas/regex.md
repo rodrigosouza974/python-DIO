@@ -33,3 +33,10 @@ Claro! Expressões regulares, ou "regex" em Python, são como padrões de busca 
    - `\w` corresponde a qualquer caractere alfanumérico.
 
 Então, basicamente, expressões regulares são como curingas para encontrar padrões de texto em Python. Elas podem parecer complicadas no início, mas com um pouco de prática, você começará a utilizá-las com facilidade!
+
+<a href='https://docs.python.org/pt-br/3.8/howto/regex.html' target='_blank'>Expressões Regulares</a>
+  <br/>
+<a href='https://docs.python.org/pt-br/3/library/re.html' target='_blank'>re — Regular expression operations</a>
+  <br/>
+
+  re — Regular expression operations
