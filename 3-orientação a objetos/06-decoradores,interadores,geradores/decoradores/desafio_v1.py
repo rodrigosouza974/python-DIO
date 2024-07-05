@@ -2,6 +2,15 @@ import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 
+def log_transacao(func):
+    def wrapper(*args, **kwargs):
+        data_hora = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        print(f"{data_hora} - Iniciando transação: {func.__name__}")
+        result = func(*args, **kwargs)
+        data_hora = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        print(f"{data_hora} - Transação concluída: {func.__name__}")
+        return result
+    return wrapper
 
 class ContaIterador:
     def __init__(self, contas):
@@ -66,6 +75,7 @@ class Conta:
     def historico(self):
         return self._historico
 
+    @log_transacao
     def sacar(self, valor):
         saldo = self.saldo
         excedeu_saldo = valor > saldo
@@ -82,7 +92,8 @@ class Conta:
             print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
 
         return False
-
+    
+    @log_transacao
     def depositar(self, valor):
         if valor > 0:
             self._saldo += valor
@@ -145,7 +156,7 @@ class Historico:
         )
 
     def gerar_relatorio(self, tipo_transacao=None):
-        pass
+        for transacao is None
 
 
 class Transacao(ABC):
@@ -257,6 +268,19 @@ def sacar(clientes):
         return
 
     cliente.realizar_transacao(conta, transacao)
+
+
+
+def transacoes_iterador(self):
+        for transacao in self.transacoes:
+            yield transacao
+
+def extrato(self, tipo_transacao=None):
+    if tipo_transacao:
+        transacoes_filtradas = (transacao for transacao in self.transacoes if transacao[1] == tipo_transacao)
+    else:
+        transacoes_filtradas = self.transacoes_iterador()
+
 
 
 @log_transacao
