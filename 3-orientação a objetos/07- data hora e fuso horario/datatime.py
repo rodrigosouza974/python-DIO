@@ -1,6 +1,3 @@
-Claro! Aqui está um exemplo de como obter a data e a hora atuais em Python e exibi-las em português:
-
-```python
 import datetime
 
 # Obter a data e hora atuais

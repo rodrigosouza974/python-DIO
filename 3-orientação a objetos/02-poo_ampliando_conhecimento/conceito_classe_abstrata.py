@@ -3,6 +3,10 @@ serve como uma base para outras classes. Ela define um conjunto de métodos e/ou
 propriedades que devem ser implementados pelas classes derivadas. Em Python, as 
 classes abstratas são criadas usando o módulo `abc` (Abstract Base Classes).
 """
+
+"""O decorador @abstractproperty foi descontinuado no Python 3.3. Agora,
+para definir propriedades abstratas, usa-se uma combinação de @property com @abstractmethod
+"""
 ### Características das Classes Abstratas
 
 """1. **Não pode ser instanciada:** Você não pode criar uma instância de uma classe abstrata diretamente.
